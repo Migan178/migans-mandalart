@@ -1,9 +1,15 @@
 <script lang="ts">
-	import "./app.css";
+	import MDA from "./lib/MDA.svelte";
+	import mandalartName from "./stores/name";
 </script>
 
-<main>
+<main class="flex items-center justify-center w-screen h-screen gap-x-10">
+	<MDA />
 	<div>
-		<h1>Hello, World!</h1>
+		<h1>미간라트</h1>
+		<div>
+			<label for="name">이름</label>
+			<input id="name" type="text" bind:value={$mandalartName} />
+		</div>
 	</div>
 </main>
