@@ -12,7 +12,7 @@
 
 <input
 	type="text"
-	class={`border border-black w-20 h-20 text-center
+	class={`h-20 w-20 border border-black text-center
 	${main ? "bg-blue-500 text-white" : null}
 	${sub ? "bg-yellow-500 text-white" : null}`}
 	bind:value

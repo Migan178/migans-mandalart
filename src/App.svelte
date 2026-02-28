@@ -3,7 +3,7 @@
 	import mandalartName from "./stores/name";
 </script>
 
-<main class="flex items-center justify-center w-screen h-screen gap-x-10">
+<main class="flex h-screen w-screen items-center justify-center gap-x-10">
 	<MDA />
 	<div>
 		<h1>미간라트</h1>

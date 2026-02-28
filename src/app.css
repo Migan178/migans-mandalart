@@ -2,6 +2,6 @@
 
 @layer base {
 	input[type="text"] {
-		@apply outline-none ring-0;
+		@apply ring-0 outline-none;
 	}
 }
