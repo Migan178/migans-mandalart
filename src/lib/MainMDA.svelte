@@ -12,7 +12,7 @@
 	</div>
 	<div class="flex">
 		<SubMDAInput i={3} />
-		<Input bind:value={$mandalartName} main />
+		<Input bind:value={$mandalartName} />
 		<SubMDAInput i={4} />
 	</div>
 	<div class="flex">
