@@ -10,11 +10,11 @@
 	}
 
 	input[type="text"] {
-		@apply ring-0 outline-none bg-slate-900 text-(--text-color);
+		@apply bg-slate-900 text-(--text-color) ring-0 outline-none;
 	}
 
 	body {
-		@apply font-[Pretendard] bg-(--bg-color);
+		@apply bg-(--bg-color) font-[Pretendard] text-[14px] md:text-[16px];
 	}
 
 	a {
@@ -22,7 +22,7 @@
 	}
 
 	a:hover {
-		@apply duration-250 text-(--hover-color);
+		@apply text-(--hover-color) duration-250;
 	}
 	::-webkit-scrollbar {
 		background-color: var(--bg2-color);

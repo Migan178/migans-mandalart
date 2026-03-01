@@ -3,7 +3,9 @@
 	import mandalartName from "./stores/name";
 </script>
 
-<main class="flex h-screen w-screen items-center justify-center gap-x-10">
+<main
+	class="flex h-screen w-screen flex-col gap-y-10 md:flex-row md:items-center md:justify-center md:gap-x-10 md:gap-y-0"
+>
 	<MDA />
 	<div>
 		<h1 class="mb-2 text-3xl font-semibold text-(--text-color)">
