@@ -8,7 +8,8 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
-		"format": "prettier . -w"
+		"format": "prettier . -w",
+		"asset-generate": "pnpm dlx @vite-pwa/assets-generator ./public/miganart.svg -p minimal"
 	},
 	"devDependencies": {
 		"@migan/prettier-config": "^2.0.0",
@@ -21,7 +22,8 @@
 		"svelte": "^5.45.2",
 		"svelte-check": "^4.3.4",
 		"typescript": "~5.9.3",
-		"vite": "^7.3.1"
+		"vite": "^7.3.1",
+		"vite-plugin-pwa": "^1.2.0"
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.2.1",
