@@ -9,13 +9,10 @@ export default defineConfig({
 		svelte(),
 		tailwindcss(),
 		VitePWA({
-			devOptions: {
-				enabled: true,
-			},
 			registerType: "autoUpdate",
 			workbox: {
 				clientsClaim: true,
-				skipWaiting: true, 
+				skipWaiting: true,
 			},
 			includeAssets: [
 				"miganart.svg",
@@ -61,7 +58,7 @@ export default defineConfig({
 						src: "/pwa-512x512.png",
 						sizes: "512x512",
 						type: "image/png",
-						form_factor: "narrow", 
+						form_factor: "narrow",
 						label: "Mobile View",
 					},
 				],

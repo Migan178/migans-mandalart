@@ -1,9 +1,11 @@
 <script lang="ts">
 	import MainMDA from "./MainMDA.svelte";
 	import SubMDA from "./SubMDA.svelte";
+
+	let { area = $bindable() }: { area: any | null } = $props();
 </script>
 
-<div class="border">
+<div class="border" bind:this={area}>
 	<div class="flex">
 		{#each { length: 3 }, i}
 			<SubMDA {i} />
