@@ -1,23 +1,23 @@
 <script lang="ts">
 	import mandalartName from "../stores/name";
+	import { subNames } from "../stores/name";
 	import Input from "./Input.svelte";
-	import SubMDAInput from "./SubMDAInput.svelte";
 </script>
 
 <div>
 	<div class="flex">
 		{#each { length: 3 }, i}
-			<SubMDAInput {i} />
+			<Input bind:value={$subNames[i]} sub />
 		{/each}
 	</div>
 	<div class="flex">
-		<SubMDAInput i={3} />
+		<Input bind:value={$subNames[3]} sub />
 		<Input bind:value={$mandalartName} />
-		<SubMDAInput i={4} />
+		<Input bind:value={$subNames[4]} sub />
 	</div>
 	<div class="flex">
 		{#each { length: 3 }, i}
-			<SubMDAInput i={i + 5} />
+			<Input bind:value={$subNames[i + 5]} sub />
 		{/each}
 	</div>
 </div>

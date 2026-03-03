@@ -4,4 +4,4 @@ const mandalartName = writable("");
 
 export default mandalartName;
 
-export const subNames = writable<string[]>(["", "", "", "", "", "", "", ""]);
+export const subNames = writable<string[]>([]);

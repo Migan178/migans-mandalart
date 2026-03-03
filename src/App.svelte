@@ -11,7 +11,6 @@
 		}
 
 		const downloadElement = document.createElement("a");
-
 		downloadElement.href = await domToPng(captureArea, {
 			scale: 2,
 		});
@@ -37,7 +36,7 @@
 				on:click={handleSave}
 				class="rounded-4xl bg-slate-900 px-4 py-2 text-(--text-color) duration-250 hover:cursor-pointer hover:text-(--hover-color)"
 			>
-				저장하기
+				이미지 파일로 저장하기
 			</button>
 		</div>
 	</div>

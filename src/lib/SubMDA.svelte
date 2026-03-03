@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { subNames } from "../stores/name";
 	import Input from "./Input.svelte";
-	import SubMDAInput from "./SubMDAInput.svelte";
 
 	let { i }: { i: number } = $props();
 </script>
@@ -13,7 +13,7 @@
 	</div>
 	<div class="flex">
 		<Input />
-		<SubMDAInput {i} />
+		<Input bind:value={$subNames[i]} sub />
 		<Input />
 	</div>
 	<div class="flex">
