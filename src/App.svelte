@@ -1,11 +1,12 @@
 <script lang="ts">
 	import MDA from "./lib/MDA.svelte";
-	import mandalartName from "./stores/name";
+	import mandalartName, { loadMandalArt, saveMandalart } from "./stores/name";
 	import { domToPng } from "modern-screenshot";
+	import { onMount } from "svelte";
 
 	let captureArea: any | null;
 
-	async function handleSave(e: MouseEvent) {
+	async function handleSave() {
 		if (!captureArea) {
 			return;
 		}
@@ -17,6 +18,10 @@
 		downloadElement.download = "mandalart.png";
 		downloadElement.click();
 	}
+
+	onMount(() => {
+		loadMandalArt();
+	});
 </script>
 
 <main
