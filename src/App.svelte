@@ -19,6 +19,10 @@
 		downloadElement.click();
 	}
 
+	function handleBlur() {
+		saveMandalart();
+	}
+
 	onMount(() => {
 		loadMandalArt();
 	});
@@ -29,17 +33,22 @@
 >
 	<MDA bind:area={captureArea} />
 	<div>
-		<h1 class="mb-2 text-3xl font-semibold text-(--text-color)">
+		<h1 class="mb-2 text-3xl font-semibold text-black dark:text-zinc-200">
 			<a href="https://migan.co.kr">미간</a>라트
 		</h1>
 		<div>
 			<div class="mb-2">
-				<label for="name" class="text-(--text-color)">이름</label>
-				<input id="name" type="text" bind:value={$mandalartName} />
+				<label for="name" class="dark:text-zinc-300">이름</label>
+				<input
+					id="name"
+					type="text"
+					bind:value={$mandalartName}
+					onblur={handleBlur}
+				/>
 			</div>
 			<button
-				on:click={handleSave}
-				class="rounded-4xl bg-slate-900 px-4 py-2 text-(--text-color) duration-250 hover:cursor-pointer hover:text-(--hover-color)"
+				onclick={handleSave}
+				class="rounded-4xl border border-black px-4 py-2 duration-250 hover:cursor-pointer hover:text-zinc-800 dark:bg-slate-900 dark:text-zinc-200 dark:hover:text-white"
 			>
 				이미지 파일로 저장하기
 			</button>

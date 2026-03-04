@@ -1,37 +1,27 @@
 @import "tailwindcss";
 
 @layer base {
-	:root {
-		--text-color: #dedede;
-		--bg-color: #090c16;
-		--bg2-color: #070a11;
-		--scroll-color: #14213f;
-		--hover-color: white;
+	input[type="text"] {
+		@apply border border-black text-black ring-0 outline-none dark:bg-slate-900 dark:text-zinc-200;
 	}
 
-	input[type="text"] {
-		@apply bg-slate-900 text-(--text-color) ring-0 outline-none;
+	html {
+		@apply h-screen w-screen;
 	}
 
 	body {
-		@apply bg-(--bg-color) font-[Pretendard] text-[14px] md:text-[16px];
+		@apply bg-white font-[Pretendard] text-[14px] md:text-[16px] dark:bg-slate-950;
 	}
 
 	a {
-		@apply duration-250;
+		@apply text-black duration-250 hover:text-zinc-800 dark:text-zinc-200 dark:hover:text-white;
 	}
 
-	a:hover {
-		@apply text-(--hover-color) duration-250;
-	}
 	::-webkit-scrollbar {
-		background-color: var(--bg2-color);
+		@apply dark:bg-[#070a11];
 	}
 
 	::-webkit-scrollbar-thumb {
-		background-color: var(--scroll-color);
-		border-radius: 10px;
-		background-clip: padding-box;
-		border: 4px solid transparent;
+		@apply dark:rounded-[10px] dark:border-4 dark:border-solid dark:border-transparent dark:bg-[#14213f] dark:bg-clip-padding;
 	}
 }

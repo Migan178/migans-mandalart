@@ -16,8 +16,8 @@
 
 <input
 	type="text"
-	class={`h-10 w-10 border border-black text-center text-[8px] md:h-20 md:w-20 md:text-base
-	${sub ? "bg-mauve-900 text-white" : null}`}
+	class={`h-10 w-10 text-center text-[8px] md:h-20 md:w-20 md:text-base
+	${sub ? "bg-yellow-300 text-white dark:bg-mauve-900" : null}`}
 	onblur={handleBlur}
 	bind:value
 />
