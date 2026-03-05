@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 @layer base {
-	input[type="text"] {
+	input[type="text"],
+	div[contenteditable="true"] {
 		@apply border border-black text-black ring-0 outline-none dark:bg-slate-900 dark:text-zinc-200;
+	}
+
+	div[contenteditable="true"] {
+		@apply flex flex-col items-center justify-center overflow-y-auto text-center break-all;
 	}
 
 	html {
