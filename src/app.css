@@ -10,7 +10,8 @@
 		@apply flex flex-col items-center justify-center overflow-y-auto text-center break-all;
 	}
 
-	html {
+	html,
+	body {
 		@apply h-screen w-screen;
 	}
 

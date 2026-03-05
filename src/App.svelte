@@ -23,6 +23,10 @@
 		saveMandalart();
 	}
 
+	async function handleShare() {
+		navigator.clipboard.writeText(window.location.href);
+	}
+
 	onMount(() => {
 		loadMandalArt();
 	});
@@ -42,6 +46,7 @@
 				<input
 					id="name"
 					type="text"
+					class="rounded-4xl px-4 py-2"
 					bind:value={$mandalartName}
 					onblur={handleBlur}
 				/>
@@ -51,6 +56,12 @@
 				class="rounded-4xl border border-black px-4 py-2 duration-250 hover:cursor-pointer hover:text-zinc-800 dark:bg-slate-900 dark:text-zinc-200 dark:hover:text-white"
 			>
 				이미지 파일로 저장하기
+			</button>
+			<button
+				onclick={handleShare}
+				class="rounded-4xl border border-black px-4 py-2 duration-250 hover:cursor-pointer hover:text-zinc-800 dark:bg-slate-900 dark:text-zinc-200 dark:hover:text-white"
+			>
+				클립보드에 링크 복사
 			</button>
 		</div>
 	</div>
