@@ -51,18 +51,16 @@
 					onblur={handleBlur}
 				/>
 			</div>
-			<button
-				onclick={handleSave}
-				class="rounded-4xl border border-black px-4 py-2 duration-250 hover:cursor-pointer hover:text-zinc-800 dark:bg-slate-900 dark:text-zinc-200 dark:hover:text-white"
+			<div
+				class="flex flex-col gap-y-1 md:flex-row md:gap-x-1 md:gap-y-0"
 			>
-				이미지 파일로 저장하기
-			</button>
-			<button
-				onclick={handleShare}
-				class="rounded-4xl border border-black px-4 py-2 duration-250 hover:cursor-pointer hover:text-zinc-800 dark:bg-slate-900 dark:text-zinc-200 dark:hover:text-white"
-			>
-				클립보드에 링크 복사
-			</button>
+				<button onclick={handleSave} class="btn">
+					이미지 파일로 저장하기
+				</button>
+				<button onclick={handleShare} class="btn">
+					클립보드에 링크 복사
+				</button>
+			</div>
 		</div>
 	</div>
 </main>

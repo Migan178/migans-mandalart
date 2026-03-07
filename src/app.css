@@ -5,7 +5,6 @@
 	div[contenteditable="true"] {
 		@apply border border-black text-black ring-0 outline-none dark:bg-slate-900 dark:text-zinc-200;
 	}
-
 	div[contenteditable="true"] {
 		@apply flex flex-col items-center justify-center overflow-y-auto text-center break-all;
 	}
@@ -30,4 +29,8 @@
 	::-webkit-scrollbar-thumb {
 		@apply dark:rounded-[10px] dark:border-4 dark:border-solid dark:border-transparent dark:bg-[#14213f] dark:bg-clip-padding;
 	}
+}
+
+@utility btn {
+	@apply w-fit rounded-4xl border border-black px-4 py-2 duration-250 hover:cursor-pointer hover:text-zinc-800 dark:bg-slate-900 dark:text-zinc-200 dark:hover:text-white;
 }
